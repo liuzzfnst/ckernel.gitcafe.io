@@ -1,0 +1,99 @@
+<h1 id="linux-2">中国Linux内核开发者大会 #2</h1>
+
+<h3 id="fit">2007.10.13 北京 清华大学清华园FIT楼</h3>
+
+<pre><code>第一场
+主题：ACPI in Linux - Myths vs Reality
+主讲人： Len Brown（He is a Principal Engineer with Intel's Open Source Technology Center.
+At Intel over 10-years, he's worked on operating systems, performance tuning, 
+and new hardware bring-up on supercomputers, servers, and network
+processors. Previously, Len spent 5-years at Sun Microsystems porting
+kernels, bringing up new systems, and tuning performance. Earlier he
+spent several years on VLSI architecture and network performance analysis at AT&amp;T
+Bell Laboratories. Len has an MSEE in Computer Engineering from Carnegie
+Mellon University and a BSEE from Tufts University. He works from his
+Home near Boston.）
+演讲内容：
+Major Linux distributors have been shipping ACPI in
+Linux for several years, yet mis-perceptions about ACPI
+persist in the Linux community. This talk addresses
+the most common myths about ACPI in Linux.
+
+第二场
+主题：走入Linux内核
+主讲人： 陈莉君教授（西安邮电学院教师，1998年底进入Linux世界，带领96、97级学生进行Linux内核分析。
+曾经出版过《Linxu操作系统内核分析（内核2.0）》、《深入分析Linux源代码（内核2.4）》、《Linux操作系统
+原理与应用》，翻译的书籍有《深入理解Linux内核》、《Linux技术手册》、《Linux内核编程》、《Linux内核设计
+与实现》，参考网站: 内核之旅http://www.kerneltravel.net/)
+演讲内容：
+曾穿越于Linux内核2.0~2.6，并没有熟悉所有的代码，但在Linux内核这样一个庞大的森林面前，几经周折，
+找到了那个入口，并尽力穿过主要岔路口。本场主讲嘉宾将分享自己在Linux内核分析方面的经验和体会。
+
+第三场
+主题：Linux文件预读算法
+主讲人： 吴峰光(吴峰光是中国科学技术大学自动化系的博士生。他在1998年开始学习Linux，继而尝试为同学
+	们提供一些网络服务。其中最受关注的是PXE网络启动(knoppix/rip)与安装(debian/ubuntu/...)服务
+	和高速视频下载服务。为了优化服务器的性能，他开始尝试改进Linux kernel，并最终重写了内核的文件预
+	读部分，并向Linux内核提交代码，他提交的Linux文件预读算法代码已经被Linux官方组织正是接纳。)
+演讲内容：
+磁盘IO性能的发展远远滞后于CPU和内存，因而成为现代计算机系统的一个主要瓶颈。预读(readahead/prefetching)
+可以有效的减少磁盘的寻道次数和应用程序的IO等待时间，是改进磁盘读IO性能的重要优化手段之一。我们重写了Linux内核
+中的预读算法，改进了其数据结构和算法。以更清晰的代码，实现了对更多读取模式的支持，包括异步／非阻塞IO，
+多线程交织IO，顺序随机混合IO，大规模并发IO，等等。 该算法可能的应用领域包括一些数据库应用，NFS/VOD/HTTP文件
+服务，多线程／多媒体应用， 科学及工程计算等等。所述改进将会出现在Linux 2.6.23及其后续版本中。
+
+第四场
+主题：Kernel-mode video driver for Linux
+主讲人： Jesse Barness(Jesse is a long time Linux and open source contributor. He is perhaps
+best known for his role as Linux platform maintainer for SGI's Altix
+line of Itanium based computers, in which he contributed significantly
+to Linux scalability efforts, APIs for driver optimization, and new
+userspace interfaces to allow user level drivers like X to be easily
+ported to exotic platforms.
+Jesse currently works at Intel's Open source Technology Center (OTC),
+where he collaborates with other OTC developers on developing software
+and drivers for Intel's graphics chips and platform architecture.
+Current tasks include improve graphics on Linux, reducing power
+consumption, and working on platform architecture for future Intel
+Products)
+演讲内容：
+This talk will focus on the Linux graphics space, providing an overview
+of the current state of affairs, and the author's efforts to improve
+them. We'll cover, in-depth, attempts to redesign the kernel's
+graphics subsystem to improve user's suspend/resume, panic, and
+graphics configuration experience. This will include an overview of
+the current pieces of the graphics puzzle ( e.g. kernel DRM, fb layer,
+vgacon, X server, etc.), how they fit together (or not), and what can
+be done to make them play together nicely (like centralizing important
+functions in kernel space), with an eye toward the DRM modesetting
+tree, which includes significant new kernel functionality and userspace
+APIs to take advantage of it. Particular attention will be paid to
+initial graphics discovery and configuration, modesetting, and memory
+management。
+
+第五场
+主题：Living Rules in Kernel Community
+主讲人： Bryan Wu 伍鹏(现为美国模拟器件公司Blackfin Linux Team的产品应用工程师。他一直活跃在嵌入式
+	Linux开发的领域。当前，他是Blackfin体系架构在Linux内核社区的maintainer。负责内核开发，
+	blackfin-git tree维护，以及其他开源项目的工作。在2.6.22稳定内核中已经正式加入了对Blackfin体系
+	架构的支持。)
+演讲内容：
+1. LKML introduction
+2. Patch Living rules
+3. Blackfin uClinux kernel management
+4. Conclusion and reference
+
+第六场
+主题：如何促进中国开发者参与Linux内核开发
+主讲人： 李阳(毕业于北京大学计算机系。李阳是飞思卡尔半导体的资深软件工程师，拥有7年Linux相关开发的经验。
+	目前主要从事PowerPC嵌入式Linux系统移植和驱动程序开发，并积极向Linux内核提交代码。最近发起并组织
+	内核开发文档的翻译工作，并建立zh-kernel.org内核开发者中文社区，以帮助更多华人参与到Linux内核开发
+	和维护中。)
+演讲内容：
+通过分析和讨论Linux内核开发目前的现状，和中国Linux相关开发的情况。阐述参与主流内核开发的重要性。并且提
+出作为最终用户，相关企业和开源社区为此目标可以做出的尝试。简要介绍目前zh-kernel社区正在进行的文档翻译
+工作，和对未来的展望。
+</code></pre>
+
+<p><a href="/_pages/2006.html" style="padding:3px;">2006</a><a href="/_pages/2007.html" style="padding:3px;">2007</a><a href="/_pages/2008.html" style="padding:3px;">2008</a><a href="/_pages/2009.html" style="padding:3px;">2009</a><a href="/_pages/2010.html" style="padding:3px;">2010</a><a href="/_pages/2011.html" style="padding:3px;">2011</a><a href="/_pages/2012.html" style="padding:3px;">2012</a><a href="/_pages/2013.html" style="padding:3px;">2013</a><a href="/_pages/2014.html" style="padding:3px;">2014</a></p>
+<p><a href="/">《 Back Home</a></p>
